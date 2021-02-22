@@ -1,11 +1,8 @@
 import pygame
-from pygame import Surface, Vector2
 import math
 
 WIDTH = 800
 HEIGHT = 600
-
-points = []
 
 
 def main():
@@ -18,7 +15,7 @@ def main():
     is_running = True
 
     n = 1
-    c = 1
+    c = 3
 
     while is_running:
         for event in pygame.event.get():
@@ -42,8 +39,8 @@ def main():
     pygame.quit()
 
 
-def clamp(x, min, max):
-    return x if x > min and x < max else (min if x < min else max)
+def clamp(n, min, max):
+    return n if n > min and n < max else (min if n < min else max)
 
 
 if __name__ == "__main__":
